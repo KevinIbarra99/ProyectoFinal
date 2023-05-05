@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "719467835777",
-    "project_id": "whereplace-1d061",
-    "storage_bucket": "whereplace-1d061.appspot.com"
+    "project_number": "533769851440",
+    "project_id": "proyectofinal-780e8",
+    "storage_bucket": "proyectofinal-780e8.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:719467835777:android:078e540d87a407afe8f880",
+        "mobilesdk_app_id": "1:533769851440:android:e5ed39e7e7a49d68a313f5",
         "android_client_info": {
           "package_name": "orientacion.turistica.whereplace"
         }
       },
       "oauth_client": [
         {
-          "client_id": "719467835777-6rav74qfiek1a88t75pm2v8fl9qlpspg.apps.googleusercontent.com",
+          "client_id": "533769851440-bs8nsmk3pfou83ejfut2si2hl1rgc6nj.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDA74xa0i3Q5pbljMzTQAARxhdnlc4S4XM"
+          "current_key": "AIzaSyAfWZbisaxFjPhz5ED4XgQ-ioeM4ugfIAQ"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "719467835777-6rav74qfiek1a88t75pm2v8fl9qlpspg.apps.googleusercontent.com",
+              "client_id": "533769851440-bs8nsmk3pfou83ejfut2si2hl1rgc6nj.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
