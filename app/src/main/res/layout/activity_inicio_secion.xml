@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Inicio_Secion"
+    android:orientation="vertical"
+    android:background="@mipmap/ciudadturistico">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="5dp">
+
+        <ImageView
+            android:id="@+id/regreso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="350dp"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/blanco"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="100dp"
+            android:src="@mipmap/logo_sin_fondo"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        android:background="@drawable/fondoredond">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/text_ini1"
+            android:textSize="25sp"
+            android:textColor="@color/principal_green"
+            android:gravity="center"
+            android:layout_marginTop="30dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/text_ini2"
+            android:textSize="26sp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:background="@drawable/textredon"
+            android:layout_marginRight="45dp"
+            android:layout_marginLeft="50dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/iniciar_sesion2"
+            android:gravity="center"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/principal_green"
+            android:textSize="20sp"/>
+
+        <EditText
+            android:id="@+id/usuario"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="48dp"
+            android:ems="10"
+            android:hint="@string/nombre"
+            android:inputType="textEmailAddress"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:background="@drawable/textwhitesinborde"/>
+
+        <EditText
+            android:id="@+id/contra"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="48dp"
+            android:ems="10"
+            android:hint="@string/contra"
+            android:inputType="textPassword"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:background="@drawable/textwhitesinborde"/>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:columnCount="3">
+            <ImageView
+                android:layout_marginLeft="75dp"
+                android:src="@mipmap/duda"/>
+
+            <TextView
+                android:text="@string/olvidaste"
+                android:textColor="@color/black" />
+            <TextView
+                android:id="@+id/olvido"
+                android:text="@string/haz"
+                android:textColor="@color/principal_green"/>
+        </GridLayout>
+
+        <Button
+            android:id="@+id/iniciar_sesion_2"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="70dp"
+            android:layout_marginLeft="70dp"
+            android:text="@string/iniciar_sesion"
+            android:textColor="@color/white"
+            android:background="@drawable/buttonredondo2"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:text="@string/conoce"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

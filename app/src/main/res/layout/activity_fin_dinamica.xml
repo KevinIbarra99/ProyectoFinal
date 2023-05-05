@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/degradado"
+    tools:context=".Fin_Dinamica">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"/>
+
+    <TextView
+        android:layout_width="260dp"
+        android:layout_height="70sp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-black"
+        android:text="OPCION 1 (Color amarillo
+Restaurante El colmillo
+Calle Luis Antonio #239
+Col. Cruz del Valle, Centro."
+        android:textAlignment="center"
+        android:textColor="@color/gray_light"
+        />
+    <TextView
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:background="@color/gray_light"
+        android:text="¡La Opcion dos ha ganado!
+                      Restaurante El Paseo 444
+                      Calle Juan madero "
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        android:layout_marginTop="200sp"
+        />
+
+    <Button
+        android:id="@+id/btnsabermas"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="40sp"
+        android:drawableBottom="@drawable/round_button"
+        android:text="Saber mas sobre este sitio"
+        android:textSize="5sp" />
+    <Button
+        android:id="@+id/btnintentar"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20sp"
+        android:drawableBottom="@drawable/round_button"
+        android:text="Intentar de nuevo"
+        android:textSize="5sp" />
+
+    <Button
+        android:id="@+id/btnvolverinicio"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20sp"
+        android:drawableBottom="@drawable/round_button"
+        android:text="Volver a inicio"
+        android:textSize="5sp" />
+
+    <TextView
+        android:layout_width="260dp"
+        android:layout_height="70sp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-black"
+        android:text="OPCION 2 (Color azul)
+Restaurante El Paseo 444
+Calle Juan Madero #578
+Col. Mira  del Cortez, Centro."
+        android:textAlignment="center"
+        android:textColor="@color/gray_light" />
+
+</LinearLayout>

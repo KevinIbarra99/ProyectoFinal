@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Pantalla_Inicio"
+    android:orientation="vertical"
+    android:background="@mipmap/ciudadturismo">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginLeft="50dp"
+                android:text="@string/welcome"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="32sp" />
+
+            <Button
+                android:id="@+id/iniciar_sesion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:layout_marginLeft="90dp"
+                android:layout_marginRight="90dp"
+                android:text="@string/iniciar_sesion"
+                android:textColor="@color/green"
+                android:background="@drawable/buttonredondo" />
+
+            <Button
+                android:id="@+id/crear_cuenta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="90dp"
+                android:layout_marginLeft="90dp"
+                android:text="@string/crear_cuenta"
+                android:textColor="@color/green"
+                android:background="@drawable/buttonredondo"/>
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="120dp"
+                android:orientation="horizontal"
+                android:columnCount="2">
+                <TextView
+                    android:text="@string/conecta"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="125dp"/>
+                <ImageView
+                    android:id="@+id/inicio_google"
+                    android:src="@mipmap/googlito"
+                    android:layout_marginRight="100dp"
+                    android:layout_marginLeft="20dp"/>
+
+            </GridLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="75dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginLeft="50dp"
+                android:gravity="center"
+                android:text="@string/terminos"
+                android:textColor="@color/white"/>
+            
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

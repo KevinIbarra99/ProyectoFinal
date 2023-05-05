@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Perfil_Usuario">
+
+    <LinearLayout
+        android:layout_marginTop="18dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="39dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/round_button"
+            android:text="r"
+            android:textStyle="bold"
+            />
+        <Button
+            android:layout_width="39dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="307dp"
+            android:background="@drawable/round_button"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Perfil de Usuario"
+        android:layout_marginTop="3dp"
+        android:textColor="@color/principal_green"
+        android:textStyle="bold"
+        android:textSize="32sp"/>
+    <Button
+        android:layout_width="97dp"
+        android:layout_height="88dp"
+        android:background="@drawable/round_button"
+        android:layout_gravity="center"
+        android:layout_marginTop="7dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="10dp"
+        android:layout_marginTop="2sp"
+        android:background="@drawable/round_grayback">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nombre de usuario"
+            android:textStyle="bold"
+            android:textColor="@color/blacki"
+            android:textSize="18sp"
+            android:gravity="center"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="User123"
+            android:textColor="@color/blacki"
+            android:gravity="center"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:minHeight="48dp"
+            android:text="Nombre de usuario"
+            android:textColor="@color/blacki" />
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:minHeight="48dp"
+            android:text="Biografia o estado"
+            android:textColor="@color/blacki" />
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:minHeight="48dp"
+            android:text="Cuenta algo sobre ti"
+            android:textColor="@color/blacki" />
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:minHeight="48dp"
+            android:text="Inserta link o enlace"
+            android:textColor="@color/blacki" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60sp"
+            android:gravity="center"
+            android:textColor="@color/blacki"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:text="Ver fotografia"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12sp"
+            android:gravity="center"
+            android:textColor="@color/blacki"
+            android:textStyle="bold"
+            android:text="Tomar fotografia"
+            android:textSize="16sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12sp"
+            android:gravity="center"
+            android:textColor="@color/blacki"
+            android:textStyle="bold"
+            android:text="Escoger galeria"
+            android:textSize="16sp"/>
+    </LinearLayout>
+</LinearLayout>

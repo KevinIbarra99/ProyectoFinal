@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Favoritos">
+
+    <LinearLayout
+        android:layout_marginTop="18dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="39dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/round_button"
+            android:text="r"
+            android:textStyle="bold"
+            />
+        <Button
+            android:layout_width="39dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="307dp"
+            android:background="@drawable/round_button"
+            android:id="@+id/perfil"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Favoritos"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="62dp"
+        android:textColor="@color/principal_green"
+        android:textStyle="bold"
+        android:textSize="32sp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Todos tus favoritos de la app"
+        android:layout_marginTop="-5dp"
+        android:layout_marginRight="30dp"
+        android:textColor="@color/blacki"
+        android:textSize="13sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="10dp"
+        android:layout_marginTop="2sp"
+        android:background="@drawable/round_grayback">
+
+        <Button
+            android:layout_width="260dp"
+            android:layout_height="160dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/round_button"/>
+        <Button
+            android:layout_width="260dp"
+            android:layout_height="160dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/round_button"/>
+        <Button
+            android:layout_width="260dp"
+            android:layout_height="160dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/round_button"/>
+    </LinearLayout>
+</LinearLayout>

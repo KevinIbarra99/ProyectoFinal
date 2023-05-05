@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name"> WherePlace </string>
+    <string name="welcome"> Bienvenido a WherePlace. Tu viaje es nuestra prioridad </string>
+    <string name="iniciar_sesion"> Iniciar Sesión </string>
+    <string name="iniciar_sesion2"> Iniciar Sesión. </string>
+    <string name="crear_cuenta"> Crear una cuenta </string>
+    <string name="crear_cuenta2"> Crear cuenta </string>
+    <string name="conecta"> Conéctate con: </string>
+    <string name="terminos"> Conoce los términos y condiciones. </string>
+    <string name="text_ini1"> Estamos felices de tenerte </string>
+    <string name="text_ini2"> ¿Nuevo viaje en puerta? </string>
+    <string name="nombre"> Nombre de usuario / Correo </string>
+    <string name="contra"> Contraseña </string>
+    <string name="olvidaste"> ¿Olvidaste tu contraseña? </string>
+    <string name="haz"> Haz click aquí. </string>
+    <string name="conoce"> Conoce los términos y condiciones </string>
+    <string name="text_reg1"> Regístrate para que tus viajes sean toda una experiencia. </string>
+    <string name="text_reg2"> Agenda tus viajes, recibe tips, ve lo que otros usuarios recomiendan de sus experiencias. </string>
+    <string name="corre_ele"> Correo electrónico </string>
+    <string name="nom"> Nombre de usuario </string>
+    <string name="confir_contra"> Confirmar contraseña </string>
+    <string name="acep_ter"> Acepto los términos y condiciones. </string>
+    <string name="ir_g"> Ir a Gmail</string>
+    <string name="olvi_corre"> ¿Haz olvidado tu correo electrónico? </string>
+    <string name="mas_op"> Más opciones </string>
+    <string name="sig"> Siguiente </string>
+    <string name="hola"> ¡Hola Jaime! un gusto tenerte aquí. </string>
+    <string name="viaje">Tu gran viaje comienza con nosotros. </string>
+    <string name="encuentra"> Encuentra tu mejor lugar para conocer. </string>
+    <string name="donde"> ¿Adonde Viajas? </string>
+    <string name="agenda"> Agendar Viaje </string>
+    <string name="touch"> Touch Place </string>
+    <string name="reco"> Recomendaciones de otros usuarios. </string>
+    <string name="agen"> Agenda tu próximo viaje </string>
+    <string name="tupro"> Tu próximo viaje es a: </string>
+    <string name="fechas"> Selecciona las fechas de ida y venida de tu viaje. </string>
+    <string name="guarv"> Guardar Viajes </string>
+    <string name="proxiv"> Ver mis proximos viajes </string>
+    <string name="recov"> ¿Recordarme? </string>
+    <string name="activ"> Activa las notificaciones de la app para recordar tu viaje, recibir tips y estar al tanto de tus planes. </string>
+    <string name="proxivia"> Próximos viajes </string>
+    <string name="echa">
+        Echa un vistazo a tus siguientes destinos.
+        Activa las notificaciones.
+        Cambia las fichas si lo necesitas. </string>
+    <string name="volver"> Volver al inicio </string>
+</resources>

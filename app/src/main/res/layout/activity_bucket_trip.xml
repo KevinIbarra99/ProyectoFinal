@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Bucket_Trip">
+
+    <LinearLayout
+        android:layout_marginTop="18dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btngohome"
+            android:layout_width="39dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/round_button"
+            android:text=""
+            android:textStyle="bold"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+        <Button
+            android:layout_width="39dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="307dp"
+            android:background="@drawable/round_button"
+            android:contentDescription="@string/app_name"
+            tools:ignore="TouchTargetSizeCheck" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="250dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="Bucket trip list"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/green"
+        android:fontFamily="sans-serif-black"
+
+        />
+    <TextView
+        android:layout_width="250dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:text="Ten este espacio para anotar las cosas
+que deseas hacer en tus proximos viajes."
+        android:fontFamily="sans-serif-black"
+        />
+
+
+
+    <Button
+        android:id="@+id/btnagregarnota"
+        android:layout_width="29dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/round_button"
+        android:text="r"
+        android:textStyle="bold"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="Agregar Nota"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:text="Los Cabos(:
+                                                   Llevar bloqueador, sombrero y pañuelos."
+        android:layout_gravity="center"
+        android:layout_marginTop="80dp"
+        android:textAlignment="center"
+        android:background="@color/principal_green"
+        />
+
+    <Button
+        android:id="@+id/btncabos"
+        android:layout_width="90dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:drawableBottom="@drawable/round_button"
+        android:fontFamily="sans-serif-black"
+        android:text="Ver nota"
+        android:textAlignment="center"
+        android:textSize="10dp"
+        tools:ignore="TouchTargetSizeCheck,TextSizeCheck" />
+
+    <TextView
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:text="Viaje a TJ
+                                                       Ir a desayunar con Juan y Mariana."
+        android:layout_gravity="center"
+        android:layout_marginTop="80dp"
+        android:textAlignment="center"
+        android:background="@color/principal_green"
+        />
+
+    <Button
+        android:id="@+id/btntj"
+        android:layout_width="90dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:drawableBottom="@drawable/round_button"
+        android:fontFamily="sans-serif-black"
+        android:text="Ver nota"
+        android:textAlignment="center"
+        android:textSize="10dp"
+        tools:ignore="TouchTargetSizeCheck,TextSizeCheck" />
+
+    <Button
+        android:id="@+id/btnrecordarme"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="30dp"
+        android:drawableBottom="@drawable/round_button"
+        android:text="¿Recordarme?"
+        android:textSize="8dp"
+        tools:ignore="TextSizeCheck,TouchTargetSizeCheck" />
+
+</LinearLayout>

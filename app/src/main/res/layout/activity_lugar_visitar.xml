@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LugarVisitar">
+
+    <LinearLayout
+        android:layout_marginTop="18dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="39dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/round_button"
+            android:text="r"
+            android:textStyle="bold"
+            />
+        <Button
+            android:layout_width="39dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="307dp"
+            android:background="@drawable/round_button"
+            android:id="@+id/perfil"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cual es tu proximo destino?"
+        android:layout_gravity="center"
+        android:textColor="@color/principal_green"
+        android:background="@color/gray_light"
+        android:padding="10sp"
+        android:textSize="20sp"
+        android:layout_marginTop="10sp"
+        android:textStyle="italic"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancun, Quintana Roo"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="@color/principal_green"
+        android:layout_marginTop="20sp"
+        android:layout_marginLeft="30sp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/gray_light"
+        android:layout_marginTop="20sp"
+        android:padding="12dp">
+        <ImageView
+            android:layout_width="125dp"
+            android:layout_height="180dp"
+            android:src="@mipmap/playa"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ver mas de este lugar. Ver galeria"
+            android:padding="7dp"
+            android:textColor="@color/principal_green"/>
+    </LinearLayout>
+    
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Cancun es una ciudad de Mexico ubicada en la peninsula de Yucatan y
+que limita con el mar Caribe y que es conocida por sus playas. numerosos centros
+turisticos y la vida nocturna"
+        android:layout_gravity="center"
+        android:textColor="@color/gray_deep"
+        android:textStyle="bold"
+        android:layout_marginTop="15dp"/>
+
+</LinearLayout>

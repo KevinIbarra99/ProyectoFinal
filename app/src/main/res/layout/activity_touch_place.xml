@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Touch_Place">
+
+    <LinearLayout
+        android:layout_marginTop="18dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btngohome"
+            android:layout_width="39dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/round_button"
+            android:text=""
+            android:textStyle="bold"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:layout_width="39dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="307dp"
+            android:background="@drawable/round_button"
+            android:contentDescription="@string/app_name"
+            tools:ignore="TouchTargetSizeCheck" />
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Touch Place"
+        android:textAlignment="center"
+        android:textColor="@color/principal_green"
+        android:textSize="25sp" />
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="300dp"
+        android:layout_height="93dp"
+        android:background="@color/cardview_light_background"
+        android:text="¿No sabes a donde ir? Utiliza la funcion
+dinamica de TouchPlace y WherePlace para que la app elija por ti.
+ Continua!"
+
+        android:textColor="@color/black"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:backgroundTint="@color/gray"
+        />
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:layout_marginTop="20dp"
+        android:text="¿A donde quieres ir? Selecciona un Lugar"
+        android:backgroundTint="@color/gray"
+        android:background="@color/cardview_light_background"
+
+
+        />
+
+    <Spinner
+        android:id="@+id/spinnerLugar"
+        android:layout_width="250dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@color/principal_green"
+        android:textAlignment="center"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
+        />
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:layout_marginTop="80dp"
+        android:text="Presupuesto. Selecciona un rango"
+        android:backgroundTint="@color/gray"
+        android:background="@color/cardview_light_background"
+        />
+    <Spinner
+        android:id="@+id/spinnerPresupuesto"
+        android:layout_width="250dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@color/principal_green"
+        android:textAlignment="center"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
+        />
+    <Button
+        android:id="@+id/btntouchplace"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="80dp"
+        android:layout_gravity="center"
+        android:background="@drawable/round_button"
+        android:text="Utilizar funcion touch place"
+
+        />
+
+
+
+</LinearLayout>
