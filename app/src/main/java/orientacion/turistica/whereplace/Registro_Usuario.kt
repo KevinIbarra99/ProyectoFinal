@@ -9,31 +9,49 @@ import android.widget.ImageView
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
 
 class Registro_Usuario : AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth
+    private lateinit var storage: FirebaseFirestore
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registro_usuario)
 
         auth = Firebase.auth
+        storage = FirebaseFirestore.getInstance()
 
         val btn_crear: Button = findViewById(R.id.crear)
         val btn_regreso: ImageView = findViewById(R.id.regreso)
+        val etNombre: EditText = findViewById(R.id.nombre_usuario)
+        val etCorreo: EditText = findViewById(R.id.correo_usuario)
+        val etContra1: EditText = findViewById(R.id.contra_usuario)
+        val etContra2: EditText = findViewById(R.id.confir_contra)
 
         btn_crear.setOnClickListener{
+            val datos = hashMapOf(
+                "nombre" to etNombre.text.toString()
+            )
+            storage.collection("usuarios").document(etNombre.text.toString()).set(
+                hashMapOf(
+                    "nombre" to etNombre.text.toString())
+            ).addOnSuccessListener {
+                Toast.makeText(applicationContext, "Cuenta creada", Toast.LENGTH_SHORT).show()
+            }.addOnFailureListener { Toast.makeText(applicationContext, it.toString(), Toast.LENGTH_SHORT).show()
+            }
             val intent: Intent = Intent(this, Pantalla_Inicio::class.java)
-            validar_registro()
             startActivity(intent)
         }
         btn_regreso.setOnClickListener{
             val intent: Intent = Intent(this, Pantalla_Inicio::class.java)
             startActivity(intent)
         }
+
     }
+
     private fun validar_registro(){
         val et_nombre: EditText = findViewById(R.id.nombre_usuario)
         val et_correo: EditText = findViewById(R.id.correo_usuario)
