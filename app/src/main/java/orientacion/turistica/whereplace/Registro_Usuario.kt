@@ -40,7 +40,8 @@ class Registro_Usuario : AppCompatActivity() {
                     "nombre" to etNombre.text.toString())
             ).addOnSuccessListener {
                 Toast.makeText(applicationContext, "Cuenta creada", Toast.LENGTH_SHORT).show()
-            }.addOnFailureListener { Toast.makeText(applicationContext, it.toString(), Toast.LENGTH_SHORT).show()
+            }.addOnFailureListener {
+                Toast.makeText(applicationContext, "ERROR", Toast.LENGTH_SHORT).show()
             }
             val intent: Intent = Intent(this, Pantalla_Inicio::class.java)
             startActivity(intent)
