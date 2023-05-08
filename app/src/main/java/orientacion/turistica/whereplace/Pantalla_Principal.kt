@@ -27,18 +27,26 @@ class Pantalla_Principal : AppCompatActivity() {
 
         btn_donde_viajes.setOnClickListener{
             val intent: Intent = Intent(this, LugarVisitar::class.java)
+            intent.putExtra("nombre", nombre)
+            intent.putExtra("correo", correo)
             startActivity(intent)
         }
         btn_agendar_viajes.setOnClickListener{
             val intent: Intent = Intent(this, Agendar_viaje::class.java)
+            intent.putExtra("nombre", nombre)
+            intent.putExtra("correo", correo)
             startActivity(intent)
         }
         btn_touch.setOnClickListener{
             val intent: Intent = Intent(this, Touch_Place::class.java)
+            intent.putExtra("nombre", nombre)
+            intent.putExtra("correo", correo)
             startActivity(intent)
         }
         btn_opciones.setOnClickListener{
             val intent: Intent = Intent(this, MenuProvisional::class.java)
+            intent.putExtra("nombre", nombre)
+            intent.putExtra("correo", correo)
             startActivity(intent)
         }
     }
