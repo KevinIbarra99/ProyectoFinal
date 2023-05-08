@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.view.isVisible
 
 class Pantalla_Principal : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,7 +17,14 @@ class Pantalla_Principal : AppCompatActivity() {
         val btn_agendar_viajes: Button = findViewById(R.id.agenda)
         val btn_touch: Button = findViewById(R.id.touch)
         val btn_opciones: ImageView = findViewById(R.id.opciones)
-        val bienvenida : TextView =findViewById(R.id.bienvenida)
+
+        val bienvenida : TextView = findViewById(R.id.bienvenida)
+
+        var nombre = intent.getStringExtra("nombre")
+        var correo = intent.getStringExtra("correo")
+
+        bienvenida.text="¡Hola ${nombre}! un gusto tenerte aquí."
+
         btn_donde_viajes.setOnClickListener{
             val intent: Intent = Intent(this, LugarVisitar::class.java)
             startActivity(intent)
@@ -32,13 +40,6 @@ class Pantalla_Principal : AppCompatActivity() {
         btn_opciones.setOnClickListener{
             val intent: Intent = Intent(this, MenuProvisional::class.java)
             startActivity(intent)
-        }
-        val bundle = intent.extras
-
-        if (bundle != null){
-            val name = bundle.getString("name")
-            bienvenida.setText(name)
-
         }
     }
 }
