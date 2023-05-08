@@ -10,23 +10,45 @@ import android.widget.TextView
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
 
 class   Inicio_Secion : AppCompatActivity() {
 
+    private lateinit var storage: FirebaseFirestore
     private lateinit var auth: FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_inicio_secion)
 
         auth = Firebase.auth
+        storage = FirebaseFirestore.getInstance()
 
+        //Botones
         val btn_iniciar: Button = findViewById(R.id.iniciar_sesion_2)
         val btn_regreso: ImageView = findViewById(R.id.regreso)
         val btn_olvido: TextView = findViewById(R.id.olvido)
 
+        //Edit texts
+        val textUsuario: EditText = findViewById(R.id.usuario)
+        val textContra: EditText = findViewById(R.id.contra)
+
         btn_iniciar.setOnClickListener{
-            valida_ingreso()
+            //valida_ingreso()
+            var cor = textUsuario.text.toString()
+
+            storage.collection("usuarios").whereEqualTo("correo",textUsuario.text.toString())
+                .get()
+                .addOnSuccessListener {
+
+                    //Toast.makeText(baseContext, "Bienvenido "+textUsuario.text.toString(), Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Your first name is ${it.documents.get(0).data?.get("correo") }  and last name is ${it.documents.get(0).data?.get("nombre") }", Toast.LENGTH_SHORT).show()
+                        val intent: Intent = Intent(this, Pantalla_Principal::class.java)
+                        startActivity(intent)
+                }.addOnFailureListener {
+                    Toast.makeText(baseContext, "Autenticacion fallida", Toast.LENGTH_SHORT).show()
+                }
         }
         btn_regreso.setOnClickListener{
             val intent: Intent = Intent(this, Pantalla_Inicio::class.java)

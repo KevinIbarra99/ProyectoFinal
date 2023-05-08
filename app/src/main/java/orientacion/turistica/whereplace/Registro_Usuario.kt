@@ -32,17 +32,18 @@ class Registro_Usuario : AppCompatActivity() {
         val etContra2: EditText = findViewById(R.id.confir_contra)
 
         btn_crear.setOnClickListener{
-            val datos = hashMapOf(
-                "nombre" to etNombre.text.toString()
-            )
-            storage.collection("usuarios").document(etNombre.text.toString()).set(
+
+            storage.collection("usuarios").document(etCorreo.text.toString()).set(
                 hashMapOf(
-                    "nombre" to etNombre.text.toString())
+                    "nombre" to etNombre.text.toString(),
+                "contrasena" to etContra1.text.toString(),
+                "correo" to etCorreo.text.toString())
             ).addOnSuccessListener {
-                Toast.makeText(applicationContext, "Cuenta creada", Toast.LENGTH_SHORT).show()
+                Toast.makeText(baseContext, "Cuenta creada", Toast.LENGTH_SHORT).show()
             }.addOnFailureListener {
-                Toast.makeText(applicationContext, "ERROR", Toast.LENGTH_SHORT).show()
+                Toast.makeText(baseContext, "ERROR", Toast.LENGTH_SHORT).show()
             }
+
             val intent: Intent = Intent(this, Pantalla_Inicio::class.java)
             startActivity(intent)
         }
@@ -50,7 +51,6 @@ class Registro_Usuario : AppCompatActivity() {
             val intent: Intent = Intent(this, Pantalla_Inicio::class.java)
             startActivity(intent)
         }
-
     }
 
     private fun validar_registro(){
