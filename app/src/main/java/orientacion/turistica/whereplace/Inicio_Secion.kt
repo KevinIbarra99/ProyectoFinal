@@ -41,15 +41,16 @@ class   Inicio_Secion : AppCompatActivity() {
             storage.collection("usuarios").whereEqualTo("correo",textUsuario.text.toString())
                 .get()
                 .addOnSuccessListener {
-                   //Toast.makeText(baseContext, "Bienvenido "+textUsuario.text.toString(), Toast.LENGTH_SHORT).show()
                     if ( it.documents.isNotEmpty() && it.documents.get(0).data?.get("contrasena").toString().equals(textContra.text.toString())){
                         Toast.makeText(this, "Bienvenido ${it.documents.get(0).data?.get("nombre") }", Toast.LENGTH_SHORT).show()
+
                         val intent: Intent = Intent(this, Pantalla_Principal::class.java)
+                        intent.putExtra("nombre", it.documents.get(0).data?.get("nombre").toString())
+                        intent.putExtra("correo", it.documents.get(0).data?.get("correo").toString())
                         startActivity(intent)
                     } else {
                         Toast.makeText(this, "Fallo al autenticar", Toast.LENGTH_SHORT).show()
                     }
-                    //Toast.makeText(this, "Your first name is ${it.documents.get(0).data?.get("correo") }  and last name is ${it.documents.get(0).data?.get("nombre") }", Toast.LENGTH_SHORT).show()
                 }.addOnFailureListener {
                     Toast.makeText(baseContext, "Autenticacion fallida", Toast.LENGTH_SHORT).show()
                 }
