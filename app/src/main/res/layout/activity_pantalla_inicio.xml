@@ -55,7 +55,7 @@
             <GridLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="120dp"
+                android:layout_marginTop="20dp"
                 android:orientation="horizontal"
                 android:columnCount="2">
                 <TextView
