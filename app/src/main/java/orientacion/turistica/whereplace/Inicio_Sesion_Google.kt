@@ -12,6 +12,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
+import com.google.android.gms.common.SignInButton
 import com.google.android.gms.common.api.ApiException
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.gms.tasks.Task
@@ -28,7 +29,7 @@ class Inicio_Sesion_Google : AppCompatActivity() {
 
         val btn_regreso: ImageView = findViewById(R.id.regreso)
         val text_usuario: EditText = findViewById(R.id.usuario)
-        val btn_signin: Button = findViewById(R.id.siguiente)
+        var sign_in_button: SignInButton =findViewById(R.id.sign_in_button)
 
         btn_regreso.setOnClickListener{
             val intent: Intent = Intent(this, Pantalla_Inicio::class.java)
@@ -38,6 +39,15 @@ class Inicio_Sesion_Google : AppCompatActivity() {
             GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
                 .build()
+
+        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
+
+        sign_in_button.setSize(SignInButton.SIZE_WIDE)
+
+        sign_in_button.setOnClickListener{
+            val signInIntent = mGoogleSignInClient.signInIntent
+            startActivityForResult(signInIntent, RC_SIGN_IN)
+        }
 
         fun updateUI(account: GoogleSignInAccount?) {
             if (account != null){
