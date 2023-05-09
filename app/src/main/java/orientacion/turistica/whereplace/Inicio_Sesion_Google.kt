@@ -33,6 +33,11 @@ class Inicio_Sesion_Google : AppCompatActivity() {
         btn_regreso.setOnClickListener{
             val intent: Intent = Intent(this, Pantalla_Inicio::class.java)
             startActivity(intent)
+
+            btn_signin.setOnClickListener{
+                val signInIntent = mGoogleSignInClient.signInIntent
+                startActivityForResult(signInIntent, RC_SIGN_IN)
+            }
         }
         val gso =
             GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
