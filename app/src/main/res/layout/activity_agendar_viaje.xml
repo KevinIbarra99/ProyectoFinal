@@ -50,7 +50,7 @@
             android:layout_marginTop="15dp"
             android:layout_marginRight="40dp"
             android:background="@drawable/textgray"
-            android:text="@string/tupro"
+            android:hint="@string/tupro"
             android:textColor="@color/principal_green"/>
         <TextView
             android:layout_width="match_parent"
