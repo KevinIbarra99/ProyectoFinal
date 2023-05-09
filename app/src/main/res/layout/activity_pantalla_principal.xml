@@ -31,7 +31,7 @@
                 android:layout_marginLeft="60dp"
                 android:layout_marginTop="10dp"
                 android:gravity="center"
-                android:text="@string/hola"/>
+                android:text="Hola Kevin un gusto tenerte aqui"/>
             <ImageView
                 android:src="@mipmap/recusu"
                 android:layout_marginTop="2dp"

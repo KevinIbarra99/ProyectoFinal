@@ -29,9 +29,9 @@ class Inicio_Sesion_Google : AppCompatActivity() {
 
         val btn_regreso: ImageView = findViewById(R.id.regreso)
         val text_usuario: EditText = findViewById(R.id.usuario)
-        var sign_in_button: SignInButton =findViewById(R.id.sign_in_button)
+        var sign_in_button: SignInButton = findViewById(R.id.sign_in_button)
 
-        btn_regreso.setOnClickListener{
+        btn_regreso.setOnClickListener {
             val intent: Intent = Intent(this, Pantalla_Inicio::class.java)
             startActivity(intent)
         }
@@ -47,64 +47,60 @@ class Inicio_Sesion_Google : AppCompatActivity() {
         sign_in_button.setOnClickListener{
             val signInIntent = mGoogleSignInClient.signInIntent
             startActivityForResult(signInIntent, RC_SIGN_IN)
+
+        }
+    }
+
+    override fun onStart() {
+        super.onStart()
+
+        val account = GoogleSignIn.getLastSignedInAccount(this)
+        updateUI(account)
+
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        if (requestCode == RC_SIGN_IN){
+            val task =
+                GoogleSignIn.getSignedInAccountFromIntent(data)
+            handleSignInResult(task)
+
         }
 
-        fun updateUI(account: GoogleSignInAccount?) {
-            if (account != null){
-                val intent = Intent(this, Pantalla_Principal::class.java)
-
-                intent.putExtra("name", account.getDisplayName())
-                startActivityForResult(intent, LOG_OUT)
-            }
+        if(requestCode == LOG_OUT){
+            signOut()
         }
+    }
 
-        fun onStart() {
-            super.onStart()
+    private fun signOut() {
+        mGoogleSignInClient.signOut()
+            .addOnCompleteListener(this, OnCompleteListener<Void?> {
+                Toast.makeText(this,"Sesión terminada", Toast.LENGTH_SHORT).show()
+            })
+    }
 
-            val account = GoogleSignIn.getLastSignedInAccount(this)
+    private fun handleSignInResult(completedTask: Task<GoogleSignInAccount>) {
+        try {
+            val account =
+                completedTask.getResult(ApiException::class.java)
+
             updateUI(account)
-
+        } catch (e: ApiException) {
+            Log.w("test_signin", "signInResult:failed code=" + e.statusCode)
+            updateUI(null)
         }
+    }
 
-        fun handleSignInResult(completedTask: Task<GoogleSignInAccount>) {
-            try {
-                val account =
-                    completedTask.getResult(ApiException::class.java)
+    private fun updateUI(acct: GoogleSignInAccount?) {
 
-                updateUI(account)
-            } catch (e: ApiException) {
-                Log.w("test_signin", "signInResult:failed code=" + e.statusCode)
-                updateUI(null)
-            }
+        if (acct != null){
+            val intent = Intent(this, Pantalla_Principal::class.java)
+            intent.putExtra("name", acct.getDisplayName())
+            intent.putExtra("email", acct.getEmail())
+            startActivityForResult(intent, LOG_OUT)
         }
-
-
-        fun signOut() {
-            mGoogleSignInClient.signOut()
-                .addOnCompleteListener(this, OnCompleteListener<Void?> {
-                    Toast.makeText(this,"Sesión terminada", Toast.LENGTH_SHORT).show()
-                })
-        }
-
-
-        fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-            super.onActivityResult(requestCode, resultCode, data)
-
-            if (requestCode == RC_SIGN_IN){
-                val task =
-                    GoogleSignIn.getSignedInAccountFromIntent(data)
-                handleSignInResult(task)
-
-            }
-
-            if(requestCode == LOG_OUT){
-                signOut()
-            }
-        }
-
-
-
-
 
 
     }
