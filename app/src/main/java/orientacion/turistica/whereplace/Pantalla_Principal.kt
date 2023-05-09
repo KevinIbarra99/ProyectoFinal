@@ -49,5 +49,11 @@ class Pantalla_Principal : AppCompatActivity() {
             intent.putExtra("correo", correo)
             startActivity(intent)
         }
+        val bundle = intent.extras
+        if (bundle != null){
+            val name = bundle.getString("name")
+            bienvenida.setText(name)
+
+        }
     }
 }
